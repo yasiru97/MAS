@@ -1,0 +1,27 @@
+$primary-pink:#E50046;
+$pale-aquamarine: #03996C;
+$white: #fff;
+
+
+//utility colors
+$dark-transparent20: rgba(0, 0, 0, 0.20);
+$dark-transparent82: rgba(0, 0, 0, 0.82);
+$dark-transparent72: rgba(0, 0, 0, 0.72);
+$dark-transparent62: rgba(0, 0, 0, 0.62);
+$dark-transparent42: rgba(0, 0, 0, 0.42);
+$dark-transparent44: rgba(0, 0, 0, 0.44);
+$dark-transparent22: rgba(0, 0, 0, 0.22);
+$dark-transparent12: rgba(0, 0, 0, 0.12);
+$dark-transparent04: rgba(0, 0, 0, 0.04);
+$dark-transparent02: rgba(0, 0, 0, 0.02);
+
+$light-transparent75: rgba(255, 255, 255, 0.75);
+$light-transparent50: rgba(255, 255, 255, 0.5);
+$light-transparent42: rgba(255, 255, 255, 0.42);
+$light-transparent12: rgba(255, 255, 255, 0.12);
+
+// Toasts
+$toast-success-background-color: $pale-aquamarine;
+$toast-error-background-color: $primary-pink;
+$toast-info-background-color: $pale-aquamarine;
+$toast-text-color: $white;

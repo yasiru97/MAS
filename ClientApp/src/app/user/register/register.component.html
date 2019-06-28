@@ -1,0 +1,82 @@
+
+<body class="login">
+	<div class="wrapper wrapper-login wrapper-login-full p-0">
+		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient">
+			<h1 class="title fw-bold text-white mb-3">Join Our Comunity</h1>
+			<p class="subtitle text-white op-7">Ayo bergabung dengan komunitas kami untuk masa depan yang lebih baik</p>
+		</div>
+		<div class="login-aside w-50 d-flex align-items-center justify-content-center bg-white">
+
+			<div class="container container-signup container-transparent animated fadeIn">
+				<h3 class="text-center">Sign Up</h3>
+				<form [formGroup]="Service.formModel" (submit)="onSubmit()">
+				<div class="login-form">
+					<div class="form-group">
+						<label for="username" class="placeholder"><b>User Name</b></label>
+						<input  id="username" formControlName="UserName" type="text" class="form-control" required>
+						<label class="text-danger" *ngIf="Service.formModel.get('UserName').touched && Service.formModel.get('UserName').errors?.required">
+							This field is required.
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="email" class="placeholder"><b>Email</b></label>
+						<input  id="email" formControlName="Email" type="email" class="form-control" required>
+						<label class="text-danger" *ngIf="Service.formModel.get('Email').touched && Service.formModel.get('Email').errors?.email">
+							Invalid email address.
+						</label>
+						<label class="text-danger" *ngIf="Service.formModel.get('Email').touched && Service.formModel.get('Email').errors?.required">
+							This field is required.
+						</label>
+					</div>
+					<div formGroupName = "Passwords">
+					<div class="form-group">
+						<label for="passwordsignin" class="placeholder"><b>Password</b></label>
+						<div class="position-relative">
+							<input  id="passwordsignin" formControlName="Password" type="password" class="form-control" required>
+							<label class="text-danger" *ngIf="Service.formModel.get('Passwords.Password').touched && Service.formModel.get('Passwords.Password').errors?.required">
+								This field is required.
+							</label>
+							<label class="text-danger" *ngIf="Service.formModel.get('Passwords.Password').touched && Service.formModel.get('Passwords.Password').errors?.minlength">
+								Minimum 4 characters required.
+							</label>
+						<!--	<div class="show-password">
+								<i class="icon-eye"></i>
+							</div> -->
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="confirmpassword" class="placeholder"><b>Confirm Password</b></label>
+						<div class="position-relative">
+							<input  id="confirmpassword" formControlName="ConfirmPassword" type="password" class="form-control" required>
+							<label class="text-danger" *ngIf="Service.formModel.get('Passwords.ConfirmPassword').touched && Service.formModel.get('Passwords.ConfirmPassword').errors?.required">
+								This field is required.
+							</label>
+							<label class="text-danger" *ngIf="Service.formModel.get('Passwords.ConfirmPassword').touched && Service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">
+								Passwords does not match.
+							</label>
+						<!--	<div class="show-password">
+								<i class="icon-eye"></i>
+							</div>-->
+						</div>
+					</div>
+				</div>
+					<div class="row form-sub m-0">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" name="agree" id="agree">
+							<label class="custom-control-label" for="agree">I Agree the terms and conditions.</label>
+						</div>
+					</div>
+					<div class="row form-action">
+					<div class="col-md-6">
+							<a [routerLink]="['/user/login']" id="show-signin" class="btn btn-danger btn-link w-100 fw-bold">Cancel</a>
+						</div> 
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-secondary w-100 fw-bold" [disabled]="!Service.formModel.valid">Sign Up</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>

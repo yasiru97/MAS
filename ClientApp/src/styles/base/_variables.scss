@@ -1,0 +1,18 @@
+
+// Standard padding and margin
+$standard-padding: 16px;
+$standard-margin: 16px;
+
+// Fonts 
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-small: 0.8rem;
+$font-medium: 0.9rem;
+
+// zindexes
+$z-index: (
+  toastContainer: 150,
+  modal: 200
+);

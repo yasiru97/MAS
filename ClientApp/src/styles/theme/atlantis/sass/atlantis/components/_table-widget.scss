@@ -1,0 +1,164 @@
+.t-grid {
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+.t-widget, .t-input {
+    border-color: #ced4da;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+}
+.t-grid {
+    position: relative;
+    zoom: 1;
+}
+.t-grid-toolbar {
+    padding: 0;
+    background: #f9fafa;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #393f46;
+    border-color: #ced4da;
+    cursor: default;
+    margin: 0;
+    border-bottom: 1px solid;
+}
+.t-grid-header .t-header {
+    font-weight: 600 !important;
+    padding: 0 !important;
+    position: relative;
+    color: #3b3b3b;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.table thead th, .t-grid>table thead th, .t-grid>form>table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+}
+.t-grid-toolbar .btn, .t-grid-toolbar .t-button, .t-grid-toolbar .t-button {
+    display: block;
+    border-radius: 0 !important;
+    margin: 0;
+    border: 0;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    color: #515151;
+    font-size: .8125rem;
+    -webkit-transition: background-color 0.05s ease-in-out,border-color 0.05s ease-in-out,box-shadow 0.05s ease-in-out;
+    transition: background-color 0.05s ease-in-out,border-color 0.05s ease-in-out,box-shadow 0.05s ease-in-out;
+    box-shadow: none;
+}
+.t-grid table {
+    width: 100%;
+    border-collapse: separate;
+    empty-cells: show;
+    border: 0;
+}
+.t-grid-header .t-header .t-link {
+    margin: 0;
+    padding: 0.75em 0.4rem;
+    height: auto;
+    line-height: 1.75rem;
+    display: block;
+    border: 0;
+}
+.t-button{
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: .5625rem 1rem;
+}
+.t-header, .t-grid-header, .t-toolbar, .t-grouping-header, .t-tooltip, .t-grid-pager {
+    color: #393f46;
+    background-color: #f6f8fa;
+    border-color: #dee2e6;
+}
+.t-grid>table td:first-child, .t-grid>table th:first-child, .t-grid>form>table td:first-child, .t-grid>form>table th:first-child {
+   
+}
+.t-grid>table td, .t-grid>form>table td {
+    padding: 0.75em 0.4rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.t-grid-pager {
+    background: #f9fafa;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5;
+    padding: .2em .6em;
+    border-color: #ced4da;
+}
+.t-grid-pager .t-status {
+    margin: 0;
+    padding: 0;
+    padding-right: 0.6em;
+    padding-bottom: 7px;
+    padding-top: 9px;
+    height: auto;
+}
+.t-grid-pager .t-numeric, .t-grid-pager .t-status .t-icon {
+    margin: 0;
+}
+.t-grid-pager .t-refresh, .t-grid-pager .t-link, .t-grid-pager .t-state-active {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    -webkit-transition: background-color 0.06s ease-in-out;
+    transition: background-color 0.06s ease-in-out;
+    border-radius: 0;
+    color: inherit;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    font-size: .8125rem;
+    line-height: 1.5;
+    background-color: transparent;
+    text-shadow: none !important;
+    vertical-align: middle !important;
+    margin: 0;
+}
+.t-grid-pager .t-refresh {
+    height: 16px;
+}
+.t-refresh {
+    background-position: -32px -240px;
+}
+.t-icon {
+    background-image: url(http://demo.smartstore.com/backend/Administration/Content/telerik/img/sprite.png);
+}
+.t-icon, .t-sprite, .t-editor-button .t-tool-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -3333px;
+    text-align: center;
+    vertical-align: middle;
+}
+.t-grid-toolbar .btn.t-grid-add:hover, .t-grid-toolbar .t-grid-add.t-button:hover, .t-grid-toolbar .btn.t-button-primary:hover, .t-grid-toolbar .t-button-primary.t-button:hover, .t-grid-toolbar .t-button.t-grid-add:hover, .t-grid-toolbar .t-button.t-button-primary:hover {
+    background-color: #1b8fdb;
+    color: #fff;
+}
+.btn-secondary, .t-grid tbody .t-button:not(.t-grid-update):not(.t-grid-delete):not(.t-grid-insert), .t-grid .t-filter-options .t-button {
+    color: #393f46;
+    background-color: #eff1f3;
+    border-color: #eff1f3;
+    box-shadow: inset 0 0 0 rgba(255,255,255,0.15), 0 0 0 rgba(0,0,0,0.075);
+}
+.t-grid tbody .t-button.t-grid-delete {
+    color: #fff;
+    background-color: #dc3000;
+    border-color: #dc3000;
+    box-shadow: inset 0 0 0 rgba(255,255,255,0.15), 0 0 0 rgba(0,0,0,0.075);
+}
+

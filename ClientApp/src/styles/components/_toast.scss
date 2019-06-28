@@ -1,0 +1,105 @@
+.toast-container {
+  margin: 0 auto;
+  max-width: 70%;
+  font-size: 18px;
+  z-index: 999999;
+  pointer-events: auto;
+}
+
+.toast-close-button {
+  height: rem(28px);
+  width: rem(28px);
+  padding: 0;
+  color: $toast-text-color;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  order: 1;
+  top:0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    font-weight: $font-weight-medium;
+    &:before {
+      color: $toast-text-color;
+    }
+  }
+}
+
+// Block
+.ew-toast {
+
+  padding: rem(
+    $standard-padding $standard-padding / 2 $standard-padding $standard-padding *
+      1.5
+  );
+  color: $toast-text-color;
+  background: $toast-success-background-color;
+
+
+  @at-root [dir="rtl"] & {
+    padding: rem(
+      $standard-padding $standard-padding * 1.5 $standard-padding
+        $standard-padding / 2
+    );
+  }
+
+  & + & {
+    border-top: 1px solid $light-transparent42;
+  }
+
+  // Elements
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__icon {
+    font-size: rem(28px);
+    margin-right: rem($standard-margin / 2);
+
+    @at-root [dir="rtl"] & {
+      margin-right: 0;
+      margin-left: rem($standard-margin / 2);
+    }
+  }
+
+  &__message {
+    flex: 3 1 auto;
+    padding-right: 2rem;
+
+    @at-root [dir="rtl"] & {
+      text-align: right;
+      padding-left: 2rem;
+      padding-right: 0;
+    }
+  }
+
+  // Modifiers
+  &--success {
+    background: $toast-success-background-color;
+  }
+
+  &--danger {
+    background: $toast-error-background-color;
+  }
+
+  &--info {
+    background: $toast-success-background-color;
+  }
+
+  &__container {
+    position: fixed;
+    z-index: map-get($z-index, "toastContainer");
+    width: 100%;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    z-index: 99999999;
+  }
+}
