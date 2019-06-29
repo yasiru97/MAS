@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
 
-  formModel={
+  formModel= {
     UserName:'',
     Password:''
   }
@@ -20,12 +20,14 @@ export class LoginComponent implements OnInit {
     private toster:ToastrService) { }
 
   ngOnInit() {
+    if(localStorage.getItem('token') != null)
+    this.router.navigateByUrl('/home');
   }
 
   onSubmit(form:NgForm){
 
     this.service.login(form.value).subscribe(
-      (res:any)=>{
+      (res: any)=>{
         localStorage.setItem('token',res.token);
         this.router.navigateByUrl('/home');
       },
@@ -33,7 +35,7 @@ export class LoginComponent implements OnInit {
         if(err.status == 400)
           this.toster.error('Incorrect UserName or Password','Authantication Failed!')
         else
-          console.log(err);
+          console.error(err)
       }
     );
 

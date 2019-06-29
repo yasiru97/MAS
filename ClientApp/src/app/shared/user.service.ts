@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,12 @@ export class UserService {
   readonly BaseURI = 'http://localhost:56085/api'
 
   formModel = this.fb.group({
-    UserName :['',Validators.required],
-    Email :['',Validators.email],
+    UserName : ['',Validators.required],
+    Email :    ['',Validators.email],
 
    Passwords : this.fb.group({
       Password :['',[Validators.required,Validators.minLength(4)]],
-      ConfirmPassword :['',Validators.required],
+      ConfirmPassword :['',Validators.required]
     }, {Validator:this.comparePasswords})
 
   });
@@ -25,10 +25,10 @@ export class UserService {
     let ConfirmPasswordCtrl = fb.get('ConfirmPassword');
       if(ConfirmPasswordCtrl.errors == null || 'passwordMismatch' in ConfirmPasswordCtrl.errors){
         if(fb.get('Password').value != ConfirmPasswordCtrl.value)
-        ConfirmPasswordCtrl.setErrors({passwordMismatch:true});
+        ConfirmPasswordCtrl.setErrors({ passwordMismatch: true });
         else
         ConfirmPasswordCtrl.setErrors(null);
-      }
+      }      
   }
 
   register(){
@@ -37,11 +37,15 @@ export class UserService {
       Email:this.formModel.value.Email,
       Password:this.formModel.value.Passwords.Password
     };
-   return this.http.post(this.BaseURI +'/ApplicationUser/Register', body);
+   return this.http.post(this.BaseURI + '/ApplicationUser/Register', body);
   }
 
   login(formData){
-   return this.http.post(this.BaseURI +'/ApplicationUser/Login', formData);
+   return this.http.post(this.BaseURI + '/ApplicationUser/Login', formData);
 
+  }
+
+  getUserProfile(){
+       return this.http.get(this.BaseURI + '/UserProfile');
   }
 }

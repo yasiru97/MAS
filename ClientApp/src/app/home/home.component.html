@@ -244,8 +244,8 @@
 										<div class="user-box">
 											<div class="avatar-lg"><img src="https://via.placeholder.com/60x60" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
-												<h4>Hizrian</h4>
-												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+												<h4>{{userProfile.userName}}</h4>
+												<p class="text-muted">{{userProfile.email}}</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
 											</div>
 										</div>
 									</li>
@@ -283,10 +283,10 @@
 						<div class="avatar-sm float-left mr-2">
 							<img src="https://via.placeholder.com/60x60" alt="..." class="avatar-img rounded-circle">
 						</div>
-						<div class="info">
+						<div class="info" *ngIf="userDetails">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian
+									{{userDetails.userName}}
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>

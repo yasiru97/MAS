@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import * as WebFont from 'webfontloader';
 
 import { NgSelectModule } from '@ng-select/ng-select';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -18,6 +18,8 @@ import { RegisterComponent } from './user/register/register.component';
 import { UserService } from './shared/user.service';
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,11 @@ import { HomeComponent } from './home/home.component';
       progressBar:true
     }),
   ],
-  providers: [UserService],
+  providers: [UserService,AuthGuard,{
+  provide: HTTP_INTERCEPTORS,
+  useClass:AuthInterceptor,
+  multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

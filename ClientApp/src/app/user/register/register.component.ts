@@ -13,16 +13,16 @@ export class RegisterComponent implements OnInit {
   constructor(public Service: UserService, private toster:ToastrService) { }
 
   ngOnInit() {
+    this.Service.formModel.reset();
   }
-
 
   onSubmit(){
     this.Service.register().subscribe(
-      (res:any) =>{
-        if(res.succeeded){
+      (res: any) => {
+        if(res.succeeded) {
           this.Service.formModel.reset();
           this.toster.success('New User Created.','Registration Successfull!')
-        }else{
+        } else{
           res.errors.forEach(element =>{
             switch(element.code){
               case 'DuplicateUserName':
