@@ -2,13 +2,13 @@ C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.runtimeconfig.json
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.runtimeconfig.dev.json
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.dll
-C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.pdb
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.RazorAssemblyInfo.cache
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.RazorAssemblyInfo.cs
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.AssemblyInfoInputs.cache
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.AssemblyInfo.cs
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.RazorTargetAssemblyInfo.cache
-C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\bin\Debug\netcoreapp2.2\MASWebAPI.pdb
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.dll
 C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.pdb
+C:\Users\USER\Desktop\MAS\MASWebAPI\MASWebAPI\obj\Debug\netcoreapp2.2\MASWebAPI.csprojAssemblyReference.cache

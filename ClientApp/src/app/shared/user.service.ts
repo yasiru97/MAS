@@ -48,4 +48,8 @@ export class UserService {
   getUserProfile(){
        return this.http.get(this.BaseURI + '/UserProfile');
   }
+
+  logout(){
+    return localStorage.removeItem('token');
+  }
 }
