@@ -259,7 +259,7 @@
 										<div class="dropdown-divider"></div>
 										<!--<a class="dropdown-item" (click)="onLogout">Logout</a>-->
 										<!--<i (click)="deleteUser(user)" class="la la-trash">-->
-										<a class="dropdown-item" href=" ">Logout<i (click)="onLogout" class="la la-trash"></i></a>
+										<a class="dropdown-item" (click)="onLogout($event)">Logout</a>
 									</li>
 								</div>
 							</ul>
@@ -300,6 +300,11 @@
 											<span class="link-collapse">My Profile</span>
 										</a>
 									</li>
+									<li>
+										<a (click)="onLogout($event)">
+										  <span class="link-collapse">Logout</span>
+										</a>
+									  </li>
 									<li>
 										<a href="#edit">
 											<span class="link-collapse">Edit Profile</span>

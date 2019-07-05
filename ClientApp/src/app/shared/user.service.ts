@@ -49,7 +49,7 @@ export class UserService {
        return this.http.get(this.BaseURI + '/UserProfile');
   }
 
-  logout(){
-    return localStorage.removeItem('token');
+  public logout(){
+    return localStorage.setItem('token',null);
   }
 }
